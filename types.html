@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Hub - Types</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-types">
+    <header>
+         <div class="container">
+             <div class="logo">DataHub</div>
+             <nav>
+                 <ul>
+                     <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> Home</a></li>
+                     <li><a href="types.html" class="active">Types</a></li>
+                     <li><a href="security.html">Security</a></li>
+                     <li><a href="usage.html">Usage</a></li>
+                 </ul>
+             </nav>
+         </div>
+    </header>
+
+    <main class="container content-section">
+        <h1 class="page-title animate-on-scroll">Types of Data Collection & Storage Platforms</h1>
+        <p class="intro-paragraph animate-on-scroll">Data can be collected and stored using various technologies, each suited for different types of data, scale, and analysis needs. Data is often gathered via user inputs (forms), sensors (IoT), application logs, third-party sources, or through Web APIs (Application Programming Interfaces) that allow systems to exchange data programmatically. Here's an overview of common storage platforms:</p>
+
+        <section class="data-type-card animate-on-scroll">
+             <div class="icon-heading">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                <h2>Cloud-Based Platforms (SaaS/PaaS/IaaS)</h2>
+             </div>
+            <p>These platforms leverage remote servers managed by providers (like AWS, Google Cloud, Azure, Salesforce). They encompass a vast range of services, from databases (like RDS, BigQuery) to full applications (like SurveyMonkey, Google Analytics).</p>
+            <h4>How it Works:</h4>
+            <p>Data is sent via web interfaces, APIs, SDKs, or dedicated ingestion services to the provider's managed infrastructure. Users access and manage data through web consoles or programmatically.</p>
+            <div class="pros-cons">
+                <div><strong>Pros:</strong> High scalability & elasticity, accessibility from anywhere, often lower upfront costs (pay-as-you-go), managed infrastructure reduces operational burden, wide range of integrated services.</div>
+                <div><strong>Cons:</strong> Requires internet connectivity, potential for vendor lock-in, security is a shared responsibility (provider secures infrastructure, user secures configuration & data), potential data residency concerns.</div>
+            </div>
+        </section>
+
+        <section class="data-type-card animate-on-scroll">
+             <div class="icon-heading">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"> <ellipse cx="12" cy="6" rx="8" ry="3"/> <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/> <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/> </svg>
+                <h2>Relational Databases (SQL)</h2>
+             </div>
+             <p>The traditional workhorse for structured data, storing information in predefined tables with rows and columns, enforcing relationships between tables. Examples: MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database.</p>
+             <h4>How it Works:</h4>
+             <p>Data must conform to a predefined schema (table structure). Data is inserted, updated, deleted, and queried using Structured Query Language (SQL). Can be run on-premise servers or managed cloud services (like AWS RDS, Azure SQL Database).</p>
+             <div class="pros-cons">
+                <div><strong>Pros:</strong> Strong consistency (ACID compliance), data integrity through constraints, powerful and standardized querying with SQL, mature technology with wide support and tooling.</div>
+                <div><strong>Cons:</strong> Schema rigidity makes handling unstructured or rapidly changing data difficult, vertical scaling (bigger server) can be expensive, complex horizontal scaling (sharding) might be needed for massive datasets.</div>
+            </div>
+        </section>
+
+        <section class="data-type-card animate-on-scroll">
+             <div class="icon-heading">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 14h-8v-2h8v2zm0-4h-8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                <h2>NoSQL Databases</h2>
+             </div>
+             <p>A broad category of databases designed for flexibility, scalability, and handling diverse data types beyond traditional rows and columns. Examples: MongoDB (Document), Cassandra (Wide-column), Redis (Key-value), Neo4j (Graph).</p>
+             <h4>How it Works:</h4>
+             <p>Employ various data models (JSON-like documents, key-value pairs, column families, graphs) allowing for flexible or non-existent schemas. Often designed for horizontal scaling across many commodity servers, prioritizing availability and partition tolerance (BASE properties).</p>
+             <div class="pros-cons">
+                <div><strong>Pros:</strong> High scalability and performance for large datasets, flexible data models adapt easily to changing requirements, good for unstructured/semi-structured data, often optimized for specific use cases (e.g., caching, real-time feeds).</div>
+                <div><strong>Cons:</strong> Eventual consistency models can be complex to manage, querying capabilities can vary widely and may be less powerful than SQL for complex joins/analytics, relative immaturity compared to SQL means evolving standards and tooling.</div>
+            </div>
+        </section>
+
+        <section class="data-type-card animate-on-scroll">
+             <div class="icon-heading">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"> <ellipse cx="12" cy="6" rx="8" ry="3"/> <path d="M4 6v6c0 1.66 3.58 3 8 3s8-1.34 8-3V6"/> <path d="M4 12v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/> </svg>
+                <h2>Data Warehouses</h2>
+             </div>
+             <p>Centralized repositories designed specifically for Business Intelligence (BI) and analytical reporting. They store historical data, often aggregated and transformed from multiple operational sources. Examples: Snowflake, Google BigQuery, AWS Redshift, Azure Synapse Analytics.</p>
+             <h4>How it Works:</h4>
+             <p>Data undergoes ETL (Extract, Transform, Load) or ELT processes before being stored, typically in a structured, denormalized format (like star or snowflake schemas) optimized for complex analytical queries rather than transactional speed.</p>
+             <div class="pros-cons">
+                <div><strong>Pros:</strong> Optimized for fast analytical queries over large historical datasets, provides a single source of truth for reporting, separates analytical workloads from operational systems.</div>
+                <div><strong>Cons:</strong> Can be complex and costly to set up and maintain, data loading processes can introduce latency, less flexible for exploratory analysis on raw data compared to data lakes.</div>
+            </div>
+        </section>
+
+        <section class="data-type-card animate-on-scroll">
+             <div class="icon-heading">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+                <h2>Data Lakes</h2>
+             </div>
+             <p>Vast storage repositories that hold raw data in its native format, sourced from various places, without a predefined structure imposed upon ingestion. Often built on cloud storage like AWS S3 or Azure Data Lake Storage.</p>
+             <h4>How it Works:</h4>
+             <p>Data is ingested "as-is" (structured, semi-structured, unstructured like images or videos). Schema is applied later during analysis ("schema-on-read"). Tools like Spark, Presto, or dedicated query services are used to process and analyze the data.</p>
+             <div class="pros-cons">
+                <div><strong>Pros:</strong> Highly flexible (stores any data type), extremely scalable and cost-effective for large volumes, ideal for data exploration, machine learning model training on raw data.</div>
+                <div><strong>Cons:</strong> Can become a "data swamp" without proper governance and cataloging, requires specialized tools and skills for analysis, potential for inconsistent or low-quality data if not managed.</div>
+            </div>
+        </section>
+
+        <section class="summary-section animate-on-scroll">
+             <h2>Choosing the Right Platform</h2>
+             <p>The best choice depends heavily on the specific requirements: the volume, velocity, and variety of data; the need for structure vs. flexibility; query patterns (transactional vs. analytical); scalability demands; budget; and team expertise. Often, organizations use a combination of these platforms to meet different needs within their data architecture.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 DataHub. Exploring Data Collection.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
